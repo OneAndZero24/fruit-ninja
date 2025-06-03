@@ -188,7 +188,6 @@ while running:
             pygame.draw.line(trail_surf, (255, 255, 255, alpha), start, end, 8)
             screen.blit(trail_surf, (0, 0))
 
-        fruits = [f for f in fruits if f.alive and not f.is_off_screen()]
         for fruit in fruits:
             if fruit.alive and fruit.is_off_screen() and not fruit.is_bomb:
                 fruit.alive = False
